@@ -28,7 +28,7 @@ const App = () => {
         //   ]);
         // }, 1000);
   
-        let response = await axios.post('http://localhost:3000/query', {question})
+        let response = await axios.post('https://bot-backend-repo-xvbv.onrender.com/query', {question})
         console.log(response.data)
         setMessages((prev) => {
           return [...prev, { sender: "bot", text: response.data.message, data : response.data.data }]
